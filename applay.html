@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City College Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Sarina&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <div class="clock-container">
+        <div id="clock">Loading...</div>
+      
+    </div>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>City College of Health and Allied Sciences</h1>
+        <h2>Education, Excellence, Employment</h2>
+        <h2>MWANZA CAMPUS</h2>
+    </div>
+
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="vecteezy_night-starry-skies-with-white-blinking-stars_5255101.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-container">
+        <form class="registration-form">
+            <h2>City College Registration Form</h2>
+            
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required>
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="course">Course of Interest</label>
+            <select id="course" name="course" required>
+                <option value="">Select a Course</option>
+                <option value="Course 1">Course 1</option>
+                <option value="Course 2">Course 2</option>
+                <option value="Course 3">Course 3</option>
+            </select>
+            
+            <label for="education">Previous Education</label>
+            <textarea id="education" name="education" rows="3" required></textarea>
+            
+            <label for="documents">Upload Documents</label>
+            <input type="file" id="documents" name="documents" multiple>
+            
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        // Chaguo la fomati ya saa
+        const formats = ['24', '12', 'ms']; // Fomati zinazopatikana
+        let currentFormatIndex = 0; // Fomati ya kwanza ni '24'
+
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const milliseconds = now.getMilliseconds();
+
+            let formattedTime = '';
+            const format = formats[currentFormatIndex]; // Fomati ya sasa
+
+            if (format === '24') {
+                formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            } else if (format === '12') {
+                const period = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12 || 12; // 12-hour format logic
+                formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')} ${period}`;
+            } else if (format === 'ms') {
+                formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${String(milliseconds).padStart(3, '0')}`;
+            }
+
+            // Weka muda kwenye div ya saa
+            document.getElementById('clock').textContent = formattedTime;
+        }
+
+        // Badilisha fomati ya saa
+        function toggleFormat() {
+            currentFormatIndex = (currentFormatIndex + 1) % formats.length; // Hamia fomati inayofuata
+        }
+
+        // Saa inayojiendesha kila millisecond
+        setInterval(updateClock, 10);
+
+        // Anza saa mara moja
+        updateClock();
+    </script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                
+                <h3>Our team</h3>
+                <p>
+                    Our team at City College is a dedicated group of experienced professionals committed to providing exceptional education and fostering innovation in health and allied sciences.
+              
+                </p>
+            
+                <h3>contacts</h3>
+                <p>info@citycollege.com</p>
+                <p>Phone: +123 456 789</p>
+                <p>Address: 123 College Road, City Town</p>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/2111/2111463.png?semt=ais_hybrid" alt="Instagram"></a>
+                    <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/x-social-media-logo-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/2504/2504903.png?semt=ais_hybrid" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/1384/1384060.png?ga=GA1.1.737564198.1732209799&semt=ais_hybrid" alt="YouTube"></a>
+                    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/3938/3938072.png?ga=GA1.1.737564198.1732209799&semt=ais_hybrid" alt="TikTok"></a>
+                   
+             </div>
+            </div>
+            <div class="footer-section">
+                <h3><span class="star-icon">★</span> Trustpilot</h3>
+                <p>4.8</p>
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+                <div class="testimonial">
+                    <p>"City College offered me an excellent learning experience. The faculty and facilities are top-notch!"</p>
+                    <strong>- John Doe, Graduate</strong>
+                </div>
+                
+            </div>
+            <div class="footer-section">
+                <h3><span class="star-icon">★</span> Google reviews</h3>
+                <p>4.9</p>
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+                <div class="rating">
+                    <p>Rated 4.8/5 on Google Reviews</p>
+                    <div class="stars">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer-section">
+                <h3>FOR TEACHERS</h3>
+                <ul>
+                    <li>Jobs</li>
+                    <li>Schools</li>
+                    <li>Supporting senior leaders</li>
+                </ul>
+                <h3>FOR SCHOOLS</h3>
+                <ul>
+                    <li>Services for international schools</li>
+                    <li>Candidate search</li>
+                    <li>Senior leadership search</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

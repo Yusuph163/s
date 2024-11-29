@@ -1,0 +1,353 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background: #000;
+    color: white;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:rgb(2, 5, 2);
+    padding: 20px;
+    color: rgb(248, 242, 242);
+}
+
+.header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header h2 {
+    font-size: 20px;
+    margin: 5px 0;
+    color: lightgreen;
+}
+
+/* Background video */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form styling */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px; /* Reduce top margin */
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.registration-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(39, 199, 74, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e8e4e4;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #cd1515;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #cc4700;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.registration-form button:hover {
+    background-color: #ec0d0d;
+}
+
+
+
+/* Mtindo wa saa */
+.clock-container {
+    position: fixed;
+    top: 10px; /* Nafasi ya juu */
+    right: 10px; /* Nafasi ya kulia */
+ 
+    padding: 10px 20px;
+    border: 2px solid #f5f1f1; /* Mstari wa kisanduku */
+    border-radius: 8px; /* Kona za duara */
+    font-family: Arial, sans-serif;
+    color: #06cf0d; /* Rangi ya maandishi */
+    font-size: 18px;
+    z-index: 1000; /* Hakikisha iko juu ya kila kitu */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Kivuli */
+    text-align: center; /* Maandishi ya katikati */
+}
+
+.format-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 16px; /* Ukubwa wa mshale */
+    cursor: pointer;
+    color: #333; /* Rangi ya mshale */
+    
+    border: 2px solid #1af40a; /* Mstari wa duara */
+    border-radius: 50%; /* Fanya duara */
+    margin: 10px auto 0; /* Kuweka katikati */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.format-icon:hover {
+    background-color: #ff0000; /* Rangi ya bluu unapobofya */
+    color: #fff; /* Rangi ya mshale unapobofya */
+    transform: scale(1.1); /* Punguza au ongeza kidogo mshale */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 0px 0; /* Punguza nafasi ya juu na chini */
+    position: relative; /* Ruhusu kipengele cha ndani kusogea */
+}
+
+/* Logo styling */
+header .logo {
+    width: 60px; /* Punguza ukubwa wa nembo */
+    height: auto;
+    margin-bottom: -10px; /* Sogeza karibu na maandishi */
+    position: absolute;
+    top: 67px; /* Sogeza logo juu */
+    left: 50%; /* Weka katikati */
+    transform: translateX(-50%);
+}
+
+/* Heading styling */
+header h1 {
+    margin: 0;
+    font-size: 40px; /* Punguza ukubwa wa maandishi */
+    line-height: 2; /* Punguza nafasi kati ya mistari */
+}
+
+/* Slogan styling */
+header h2 {
+    margin: 2px 0 0; /* Punguza nafasi juu na chini ya slogan */
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px; /* Punguza ukubwa wa maandishi */
+}
+
+/* General page layout adjustments */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+/*Maboresho kwa watumiaji wa simu/
+
+
+
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+    header {
+        padding: 8px 0; /* Punguza nafasi juu na chini kwa simu */
+    }
+
+    header .logo {
+        width: 40px; /* Punguza zaidi ukubwa wa nembo */
+    }
+
+    header h1 {
+        font-size: 18px; /* Boresha ukubwa wa heading kwa skrini ndogo */
+    }
+
+    header h2 {
+        font-size: 14px; /* Punguza slogan kwa simu */
+    }
+
+    .clock-container {
+        top: 5px; /* Sogeza saa juu kidogo */
+        right: 5px; /* Punguza nafasi pembeni */
+    }
+}
+
+
+
+
+
+
+.section ul {
+    margin: 0;
+    padding: 10px 20px;
+    list-style-type: none;
+}
+
+.section ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.section p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+
+
+
+.footer {
+    background: rgba(16, 23, 16, 0.5);
+    color: #ffffff;
+
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.footer-section {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+
+    color: #aaa;
+}
+
+.footer-section ul {
+    list-style: none;
+    text-align: center;
+    text-align: center;
+    padding: 0;
+}
+
+.footer-section ul li {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    left: 100px;
+}
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    left: 100px;
+  
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 16px;
+}
+
+.star-icon {
+    color: #00ff00;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+
+/* Mabadiliko kwa watumiaji wa simu */
+@media (max-width: 768px) {
+    /* Ondoa background na weka rangi nyeupe kwa mwili na HTML */
+    body, html {
+        background: #fff; /* Rangi nyeupe */
+    }
+
+    /* Ficha box la saa kwa watumiaji wa simu */
+    .clock-container {
+        display: none; /* Ficha box la saa */
+    }
+
+    /* Ficha footer kwa watumiaji wa simu */
+    .footer {
+        display: none; /* Ficha footer */
+    }
+}
+
