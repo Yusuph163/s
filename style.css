@@ -351,3 +351,37 @@ body {
     }
 }
 
+
+/* Mabadiliko kwa watumiaji wa simu */
+@media (max-width: 768px) {
+    /* Fanya form kuchukua screen nzima kwa watumiaji wa simu */
+    .form-container {
+        width: 100%; /* Fanya form ichukue upana wote */
+        padding: 10px; /* Ongeza padding kidogo ili kuleta nafasi */
+    }
+
+    .registration-form {
+        width: 100%; /* Hakikisha form inachukua upana wote */
+        padding: 15px; /* Ongeza padding ndani ya form */
+        box-sizing: border-box; /* Hakikisha padding ni sehemu ya upana wa form */
+    }
+
+    .registration-form h2 {
+        font-size: 20px; /* Punguza ukubwa wa maandishi ya kichwa */
+    }
+
+    .registration-form input,
+    .registration-form select,
+    .registration-form textarea,
+    .registration-form button {
+        width: 100%; /* Hakikisha viingilio vyote vinachukua upana wote */
+        font-size: 14px; /* Punguza ukubwa wa maandishi kwa urahisi wa kusoma */
+    }
+
+    .registration-form label {
+        font-size: 14px; /* Punguza ukubwa wa maandishi ya label */
+    }
+}
+
+
+
