@@ -233,9 +233,6 @@ body, html {
 }
 
 
-
-
-
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .video-background {
@@ -254,12 +251,13 @@ body, html {
         padding: 15px;
         box-sizing: border-box;
         border-radius: 0;
+        margin-top: 50px; /* Ongeza nafasi ya juu ili kuepuka mwingiliano */
     }
-   .registration-form h2 {
+
+    .registration-form h2 {
         font-size: 20px;
     }
 
- 
     .registration-form input,
     .registration-form select,
     .registration-form textarea,
@@ -270,7 +268,8 @@ body, html {
     .registration-form label {
         font-size: 14px;
     }
-   .footer {
+
+    .footer {
         display: none; /* Ficha footer kwa watumiaji wa simu */
     }
 
