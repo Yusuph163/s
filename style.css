@@ -231,7 +231,6 @@ body, html {
     color: #fff; /* Rangi ya mshale unapobofya */
     transform: scale(1.1); /* Punguza au ongeza kidogo mshale */
 }
-
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .video-background {
@@ -240,21 +239,25 @@ body, html {
 
     .form-container {
         width: 100%;
-        padding: 0;
+        padding: 15px; /* Ongeza padding kwa nafasi zaidi */
         height: auto; /* Badilisha kutoka 100vh kuwa auto ili kuepuka kukatwa */
         background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Kivuli kidogo kwa kuionyesha fomu */
+        border-radius: 10px; /* Pembeni za fomu kuwa na mviringo */
     }
 
     .registration-form {
         width: 100%;
         padding: 15px;
         box-sizing: border-box;
-        border-radius: 0;
+        border-radius: 5px; /* Pembeni za fomu kuwa na mviringo */
         margin-top: 20px; /* Ongeza nafasi ya juu kidogo */
     }
 
     .registration-form h2 {
         font-size: 20px;
+        text-align: center; /* Tenganisha kichwa katikati */
+        margin-bottom: 15px; /* Ongeza nafasi chini ya kichwa */
     }
 
     .registration-form input,
@@ -262,10 +265,42 @@ body, html {
     .registration-form textarea,
     .registration-form button {
         font-size: 14px;
+        width: 100%; /* Hakikisha viwanja vinaenea sawia */
+        margin-bottom: 10px; /* Ongeza nafasi kati ya viwanja */
+        padding: 10px;
+        border-radius: 5px; /* Pembeni za viwanja kuwa na mviringo */
+        border: 1px solid #ddd; /* Mipaka ya viwanja */
+        outline: none; /* Ondoa kivuli cha muktadha */
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out; /* Miondoko laini */
+    }
+
+    .registration-form input:focus,
+    .registration-form select:focus,
+    .registration-form textarea:focus {
+        border-color: #007bff; /* Rangi ya mipaka wakati wa kuandika */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Kivuli kidogo kwa uelewa */
+    }
+
+    .registration-form button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    .registration-form button:hover {
+        background-color: #0056b3; /* Rangi ya mabadiliko wakati wa hover */
     }
 
     .registration-form label {
         font-size: 14px;
+        margin-bottom: 5px; /* Nafasi ya chini ya label */
+        display: block; /* Hakikisha label inaonyesha kwenye mstari mmoja */
     }
 
     .footer {
