@@ -333,6 +333,8 @@ body {
 }
 
 
+
+
 /* Mabadiliko kwa watumiaji wa simu */
 @media (max-width: 768px) {
     /* Fanya form kuchukua screen nzima kwa watumiaji wa simu */
@@ -362,6 +364,9 @@ body {
     .registration-form label {
         font-size: 14px; /* Punguza ukubwa wa maandishi ya label */
     }
+
+
+
     /* Ondoa background na weka rangi nyeupe kwa mwili na HTML */
     body, html {
         background: #fff; /* Rangi nyeupe */
@@ -377,5 +382,3 @@ body {
         display: none; /* Ficha footer */
     }
 }
-
-
