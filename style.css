@@ -242,7 +242,7 @@ body, html {
     .form-container {
         width: 100%;
         padding: 0;
-        height: 100vh; /* Hakikisha inajaa skrini nzima */
+        height: auto; /* Hakikisha inajaa skrini nzima */
         background: #fff;
     }
 
@@ -251,7 +251,7 @@ body, html {
         padding: 15px;
         box-sizing: border-box;
         border-radius: 0;
-        margin-top: 300px; /* Ongeza nafasi ya juu ili kuepuka mwingiliano */
+        margin-top: 20px; /* Ongeza nafasi ya juu ili kuepuka mwingiliano */
     }
 
     .registration-form h2 {
