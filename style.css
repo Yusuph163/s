@@ -277,3 +277,7 @@ body, html {
         display: none; /* Ficha saa kwa watumiaji wa simu */
     }
 }
+.upload-limit-message {
+    display: none;
+}
+
