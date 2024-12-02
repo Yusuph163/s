@@ -1,3 +1,4 @@
+/* General page layout adjustments */
 body, html {
     margin: 0;
     padding: 0;
@@ -5,6 +6,24 @@ body, html {
     height: 100%;
     background: #000;
     color: white;
+    overflow-x: hidden; /* Zuia scroll isiyohitajika upande wa kulia */
+}
+
+/* Background video container */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Video ijitosheleze vizuri */
 }
 
 /* Header styling */
@@ -14,9 +33,11 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background:rgb(2, 5, 2);
+    background: rgb(2, 5, 2);
     padding: 20px;
     color: rgb(248, 242, 242);
+    position: relative; /* Ruhusu vipengele vya mbele */
+    z-index: 1;
 }
 
 .header h1 {
@@ -31,31 +52,16 @@ body, html {
     color: lightgreen;
 }
 
-/* Background video */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Form styling */
+/* Form container */
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 30px; /* Reduce top margin */
+    margin-top: 30px;
     background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
 }
 
 .registration-form {
@@ -71,13 +77,6 @@ body, html {
     text-align: center;
     margin-bottom: 20px;
     color: #e8e4e4;
-}
-
-.registration-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #cd1515;
 }
 
 .registration-form input,
@@ -106,155 +105,12 @@ body, html {
 }
 
 
-
-/* Mtindo wa saa */
-.clock-container {
-    position: fixed;
-    top: 10px; /* Nafasi ya juu */
-    right: 10px; /* Nafasi ya kulia */
- 
-    padding: 10px 20px;
-    border: 2px solid #f5f1f1; /* Mstari wa kisanduku */
-    border-radius: 8px; /* Kona za duara */
-    font-family: Arial, sans-serif;
-    color: #06cf0d; /* Rangi ya maandishi */
-    font-size: 18px;
-    z-index: 1000; /* Hakikisha iko juu ya kila kitu */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Kivuli */
-    text-align: center; /* Maandishi ya katikati */
-}
-
-.format-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    font-size: 16px; /* Ukubwa wa mshale */
-    cursor: pointer;
-    color: #333; /* Rangi ya mshale */
-    
-    border: 2px solid #1af40a; /* Mstari wa duara */
-    border-radius: 50%; /* Fanya duara */
-    margin: 10px auto 0; /* Kuweka katikati */
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.format-icon:hover {
-    background-color: #ff0000; /* Rangi ya bluu unapobofya */
-    color: #fff; /* Rangi ya mshale unapobofya */
-    transform: scale(1.1); /* Punguza au ongeza kidogo mshale */
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Header styling */
-header {
-    text-align: center;
-    padding: 0px 0; /* Punguza nafasi ya juu na chini */
-    position: relative; /* Ruhusu kipengele cha ndani kusogea */
-}
-
-/* Logo styling */
-header .logo {
-    width: 60px; /* Punguza ukubwa wa nembo */
-    height: auto;
-    margin-bottom: -10px; /* Sogeza karibu na maandishi */
-    position: absolute;
-    top: 67px; /* Sogeza logo juu */
-    left: 50%; /* Weka katikati */
-    transform: translateX(-50%);
-}
-
-/* Heading styling */
-header h1 {
-    margin: 0;
-    font-size: 40px; /* Punguza ukubwa wa maandishi */
-    line-height: 2; /* Punguza nafasi kati ya mistari */
-}
-
-/* Slogan styling */
-header h2 {
-    margin: 2px 0 0; /* Punguza nafasi juu na chini ya slogan */
-    font-family: 'Dancing Script', cursive;
-    font-size: 18px; /* Punguza ukubwa wa maandishi */
-}
-
-/* General page layout adjustments */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-
-
-
-
-
-
-/*Maboresho kwa watumiaji wa simu/
-
-
-
-
-/* Media Queries for Mobile Screens */
-@media (max-width: 768px) {
-    header {
-        padding: 8px 0; /* Punguza nafasi juu na chini kwa simu */
-    }
-
-    header .logo {
-        width: 40px; /* Punguza zaidi ukubwa wa nembo */
-    }
-
-    header h1 {
-        font-size: 18px; /* Boresha ukubwa wa heading kwa skrini ndogo */
-    }
-
-    header h2 {
-        font-size: 14px; /* Punguza slogan kwa simu */
-    }
-
-    .clock-container {
-        top: 5px; /* Sogeza saa juu kidogo */
-        right: 5px; /* Punguza nafasi pembeni */
-    }
-}
-
-
-
-
-
-
-.section ul {
-    margin: 0;
-    padding: 10px 20px;
-    list-style-type: none;
-}
-
-.section ul li {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-.section p {
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-
-
-
+/* Kawaida kwa PC */
 .footer {
+    display: block; /* Onyesha footer kwa watumiaji wa PC */
+    
+
+
     background: rgba(16, 23, 16, 0.5);
     color: #ffffff;
 
@@ -335,50 +191,90 @@ body {
 
 
 
-/* Mabadiliko kwa watumiaji wa simu */
+.clock-container {
+    display: block; /* Onyesha saa kwa watumiaji wa PC */
+    /* Mtindo wa saa */
+
+    position: fixed;
+    top: 10px; /* Nafasi ya juu */
+    right: 10px; /* Nafasi ya kulia */
+ 
+    padding: 10px 20px;
+    border: 2px solid #f5f1f1; /* Mstari wa kisanduku */
+    border-radius: 8px; /* Kona za duara */
+    font-family: Arial, sans-serif;
+    color: #06cf0d; /* Rangi ya maandishi */
+    font-size: 18px;
+    z-index: 1000; /* Hakikisha iko juu ya kila kitu */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Kivuli */
+    text-align: center; /* Maandishi ya katikati */
+}
+
+.format-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 16px; /* Ukubwa wa mshale */
+    cursor: pointer;
+    color: #333; /* Rangi ya mshale */
+    
+    border: 2px solid #1af40a; /* Mstari wa duara */
+    border-radius: 50%; /* Fanya duara */
+    margin: 10px auto 0; /* Kuweka katikati */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.format-icon:hover {
+    background-color: #ff0000; /* Rangi ya bluu unapobofya */
+    color: #fff; /* Rangi ya mshale unapobofya */
+    transform: scale(1.1); /* Punguza au ongeza kidogo mshale */
+}
+
+
+
+
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    /* Fanya form kuchukua screen nzima kwa watumiaji wa simu */
+    .video-background {
+        display: none; /* Ficha video kwa simu */
+    }
+
     .form-container {
-        width: 100%; /* Fanya form ichukue upana wote */
-        padding: 10px; /* Ongeza padding kidogo ili kuleta nafasi */
+        width: 100%;
+        padding: 0;
+        height: 100vh; /* Hakikisha inajaa skrini nzima */
+        background: #fff;
     }
 
     .registration-form {
-        width: 100%; /* Hakikisha form inachukua upana wote */
-        padding: 15px; /* Ongeza padding ndani ya form */
-        box-sizing: border-box; /* Hakikisha padding ni sehemu ya upana wa form */
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 0;
     }
 
     .registration-form h2 {
-        font-size: 20px; /* Punguza ukubwa wa maandishi ya kichwa */
+        font-size: 20px;
     }
 
     .registration-form input,
     .registration-form select,
     .registration-form textarea,
     .registration-form button {
-        width: 100%; /* Hakikisha viingilio vyote vinachukua upana wote */
-        font-size: 14px; /* Punguza ukubwa wa maandishi kwa urahisi wa kusoma */
+        font-size: 14px;
     }
 
     .registration-form label {
-        font-size: 14px; /* Punguza ukubwa wa maandishi ya label */
+        font-size: 14px;
+    }
+   .footer {
+        display: none; /* Ficha footer kwa watumiaji wa simu */
     }
 
-
-
-    /* Ondoa background na weka rangi nyeupe kwa mwili na HTML */
-    body, html {
-        background: #fff; /* Rangi nyeupe */
-    }
-
-    /* Ficha box la saa kwa watumiaji wa simu */
     .clock-container {
-        display: none; /* Ficha box la saa */
-    }
-
-    /* Ficha footer kwa watumiaji wa simu */
-    .footer {
-        display: none; /* Ficha footer */
+        display: none; /* Ficha saa kwa watumiaji wa simu */
     }
 }
