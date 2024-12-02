@@ -256,10 +256,7 @@ body, html {
         border-radius: 0;
     }
 
-    .registration-form h2 {
-        font-size: 20px;
-    }
-
+ 
     .registration-form input,
     .registration-form select,
     .registration-form textarea,
