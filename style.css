@@ -335,25 +335,6 @@ body {
 
 /* Mabadiliko kwa watumiaji wa simu */
 @media (max-width: 768px) {
-    /* Ondoa background na weka rangi nyeupe kwa mwili na HTML */
-    body, html {
-        background: #fff; /* Rangi nyeupe */
-    }
-
-    /* Ficha box la saa kwa watumiaji wa simu */
-    .clock-container {
-        display: none; /* Ficha box la saa */
-    }
-
-    /* Ficha footer kwa watumiaji wa simu */
-    .footer {
-        display: none; /* Ficha footer */
-    }
-}
-
-
-/* Mabadiliko kwa watumiaji wa simu */
-@media (max-width: 768px) {
     /* Fanya form kuchukua screen nzima kwa watumiaji wa simu */
     .form-container {
         width: 100%; /* Fanya form ichukue upana wote */
@@ -382,6 +363,21 @@ body {
         font-size: 14px; /* Punguza ukubwa wa maandishi ya label */
     }
 }
+ {
+    /* Ondoa background na weka rangi nyeupe kwa mwili na HTML */
+    body, html {
+        background: #fff; /* Rangi nyeupe */
+    }
 
+    /* Ficha box la saa kwa watumiaji wa simu */
+    .clock-container {
+        display: none; /* Ficha box la saa */
+    }
+
+    /* Ficha footer kwa watumiaji wa simu */
+    .footer {
+        display: none; /* Ficha footer */
+    }
+}
 
 
